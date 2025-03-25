@@ -10,7 +10,13 @@ app.use(express.json());
 
 mongoose.connect(
   "mongodb+srv://Manikandan:Manikan200425@crud.sz6u7.mongodb.net/?retryWrites=true&w=majority&appName=crud"
-);
+,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  tlsAllowInvalidCertificates: true,  // Add this option
+  tlsAllowInvalidHostnames: true  ,
+  ssl: true 
+});
 
 app.get("/", (req, res) => {
   UserModel.find({})
