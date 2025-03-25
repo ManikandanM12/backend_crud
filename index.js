@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://Manikandan:Manikan200425@crud.sz6u7.mongodb.net/"
+  "mongodb+srv://Manikandan:Manikan200425@crud.sz6u7.mongodb.net/?retryWrites=true&w=majority&appName=crud"
 );
 
 app.get("/", (req, res) => {
